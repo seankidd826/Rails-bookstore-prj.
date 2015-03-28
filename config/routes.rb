@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
   get "welcome" => "welcome#index" #將http://localhost:3000/welcome這樣的網址對應到welcome Controller的index Action
 
-  root :to => "welcome#index" #將網站根目錄導引至welcome Controller的index Action
+  #root :to => "welcome#index" #將網站根目錄導引至welcome Controller的index Action
+  root :to => "books#index" #將網站根目錄導引至welcome Controller的index Action
 
   #match ':controller(/:action(/:id(.:format)))', :via => :all
 
