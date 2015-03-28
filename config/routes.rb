@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :books
+
   get "welcome/say_hello" => "welcome#say" #將http://localhost:3000/welcome/say_hello這樣的網址對應到welcome Controller的say Action
 
   get "welcome" => "welcome#index" #將http://localhost:3000/welcome這樣的網址對應到welcome Controller的index Action
 
   root :to => "welcome#index" #將網站根目錄導引至welcome Controller的index Action
+
+  #match ':controller(/:action(/:id(.:format)))', :via => :all
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

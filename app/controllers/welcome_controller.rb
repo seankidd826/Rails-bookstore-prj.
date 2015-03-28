@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
-  #def say
+  #def say #say 的 Action
   #end
 
-  def index
+  def index #index 的 Action
   end
 end

@@ -1,0 +1,15 @@
+<h1>Bookstore Index!</h1>
+<ul>
+<% @books.each do |book| %>
+  <li>
+    <%= book.name %>
+  <%= link_to '書本展示', book_path(book) %>
+  <%= link_to '編輯書本', edit_book_path(book) %>
+  <%= button_to '刪除書本', book_path(book), :method => :delete %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to '新增書本', new_book_path %>
+
+<%= paginate @books %>
